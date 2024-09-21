@@ -1,36 +1,51 @@
 class ForecastSerializer
-  def self.weather_json(weather_forecast)
+  def self.weather_json(weather)
     {
-      "data": weather_forecast.map do |weather|
-        binding.pry
-        {
-          "id": null,
-          "type": "forecast",
-          "attributes": {
-            "current_weather": {
-              "last_updated": "2023-04-07 16:30",
-              "temperature": 55.0
-              
-            },
-            "daily_weather": [
-              {
-                "date": "2023-04-07",
-                "sunrise": "07:13 AM"
-                
-              },
-              {"code"}
-            ],
-            "hourly_weather": [
-              {
-                "time": "14:00",
-                "temperature": 54.5
-                
-              },
-              {"code"} 
-            ]
-          }
+      "data": {
+        "id": nil,
+        "type": "forecast",
+        "attributes": {
+          "current_weather": {
+            "last_updated": weather.current.last_updated,
+            "temperature": weather.current.temperature,
+            "feels_like": weather.current.feels_like,
+            "humidity": weather.current.humidity,
+            "uvi": weather.current.uvi,
+            "visibility": weather.current.visibility,
+            "condition": weather.current.condition,
+            "icon": weather.current.icon
+          },
+
+          daily_weather: weather.forecast.map do |day|
+            daily_forecast_json(day)
+          end,
+
+          hourly_weather: weather.hourly.map do |hour|
+            hourly_forecast_json(hour)
+          end
         }
-      end
+      }
+    }
+  end
+
+  def self.hourly_forecast_json(hour)
+    {
+      "time": hour.time,
+      "temperature": hour.temperature,
+      "conditions": hour.condition,
+      "icon": hour.icon
+    }
+  end
+
+  def self.daily_forecast_json(day)
+    {
+      "date": day.date,
+      "sunrise": day.sunrise,
+      "sunset": day.sunset,
+      "max_temp": day.max_temp,
+      "min_temp": day.min_temp,
+      "condition": day.condition,
+      "icon": day.icon
     }
   end
 end
