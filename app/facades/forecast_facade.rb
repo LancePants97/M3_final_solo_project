@@ -17,7 +17,7 @@ class ForecastFacade
     data = ForecastService.find_forecast(coordinates)
     
     data[:forecast][:forecastday].map do |weather_attrs|
-      binding.pry
+      # binding.pry
       
       FiveDayForecast.new(weather_attrs)
     end
