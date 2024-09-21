@@ -5,6 +5,6 @@ class CoordinatesFacade
     coordinates = data[:results][0][:locations][0][:latLng]
     lat = coordinates[:lat]
     lon = coordinates[:lng]
-    there = "#{lat}, #{lon}"
+    "#{lat}, #{lon}"
   end
 end
