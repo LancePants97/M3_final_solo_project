@@ -7,7 +7,6 @@ class User < ApplicationRecord
   has_secure_password
 
   private
-
   def create_api_key
     loop do
       self.api_key = SecureRandom.hex(16)
