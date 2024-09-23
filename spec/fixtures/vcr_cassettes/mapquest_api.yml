@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=7ykjRVawhYyOuzN7heID00uV6b7WF3Yu&location=Point%20Pleasant,%20NJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Key:
+      - 7ykjRVawhYyOuzN7heID00uV6b7WF3Yu
+      User-Agent:
+      - Faraday v2.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 21 Sep 2024 18:33:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '809'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 0217fe40-7848-11ef-80f6-e3afc8fd68de
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"329-xrqoq9eEk1PAtZvxP+RSpOkfuqc"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJQb2ludCBQbGVhc2FudCwgTkoifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiUG9pbnQgUGxlYXNhbnQiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJhZG1pbkFyZWE0IjoiT2NlYW4iLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImFkbWluQXJlYTMiOiJOSiIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJhZG1pbkFyZWExIjoiVVMiLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJwb3N0YWxDb2RlIjoiIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTVYQVgiLCJnZW9jb2RlUXVhbGl0eSI6IkNJVFkiLCJkcmFnUG9pbnQiOmZhbHNlLCJzaWRlT2ZTdHJlZXQiOiJOIiwibGlua0lkIjoiMCIsInVua25vd25JbnB1dCI6IiIsInR5cGUiOiJzIiwibGF0TG5nIjp7ImxhdCI6NDAuMDcyMywibG5nIjotNzQuMDcxMjR9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6NDAuMDcyMywibG5nIjotNzQuMDcxMjR9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Sat, 21 Sep 2024 18:33:34 GMT
+recorded_with: VCR 6.3.1
