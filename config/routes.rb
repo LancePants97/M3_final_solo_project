@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :coordinates, only: [:index]
       get "/forecast", to: "forecasts#index"
+      post "/users", to: "users#create"
     end
   end
 end
