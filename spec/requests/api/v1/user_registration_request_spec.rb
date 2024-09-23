@@ -14,7 +14,7 @@ RSpec.describe 'User Registration Request', type: :request do
     post "/api/v1/users", params: { user: @body }
 
     user = User.last
-
+    binding.pry
     expect(user.email).to be_a(String)
     expect(user.email).to eq("lance@turing.com")
 
