@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :coordinates, only: [:index]
       get "/forecast", to: "forecasts#index"
+      get "/book-search", to: "books#index"
     end
   end
 end

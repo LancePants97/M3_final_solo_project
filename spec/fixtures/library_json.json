@@ -1,0 +1,79 @@
+{
+  "numFound": 539,
+  "start": 0,
+  "numFoundExact": true,
+  "docs": [
+      {
+          "isbn": [
+              "1938057244",
+              "9781938057489",
+              "1938057589",
+              "9781938057304",
+              "9781938057588",
+              "1938057465",
+              "9780982274606",
+              "9781938057243",
+              "1938057309",
+              "1938057481",
+              "1938057295",
+              "9781938057465",
+              "0982274629",
+              "9781938057298",
+              "9780982274620",
+              "0982274602"
+          ],
+          "publisher": [
+              "Cook Street Publishing"
+          ],
+          "title": "The Denver cereal"
+      },
+      {
+          "isbn": [
+              "0451238648",
+              "9780451238641"
+          ],
+          "publisher": [
+              "Signet Book"
+          ],
+          "title": "Werewolf in Denver"
+      },
+      {
+          "isbn": [
+              "9780451402134",
+              "0451402138"
+          ],
+          "publisher": [
+              "Penguin"
+          ],
+          "title": "Denver"
+      },
+      {
+          "isbn": [
+              "9780870813726",
+              "0870813722",
+              "0961605707",
+              "9780961605704"
+          ],
+          "publisher": [
+              "Northwest Denver Books",
+              "University Press of Colorado"
+          ],
+          "title": "Rediscovering Northwest Denver"
+      },
+      {
+          "isbn": [
+              "0914738216",
+              "9780914738213"
+          ],
+          "publisher": [
+              "Denver ArtMuseum",
+              "Denver Art Museum",
+              "The Museum"
+          ],
+          "title": "The Denver Art Museum"
+      }
+  ],
+  "num_found": 539,
+  "q": "",
+  "offset": null
+}
