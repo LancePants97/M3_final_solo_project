@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'User Registration Request', type: :request do
 ### - HAPPY PATH >:) - ###
-  it "successfully logs in" do
+  it "successfully creates" do
     user = User.create!(email: "Lance@turing.com", password: "iloveruby123")
 
     post "/api/v1/sessions", params: { email: user.email, password: user.password } 
