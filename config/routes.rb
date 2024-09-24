@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :coordinates, only: [:index]
       get "/forecast", to: "forecasts#index"
       post "/users", to: "users#create"
+      post "/sessions", to: "sessions#create"
     end
   end
 end
