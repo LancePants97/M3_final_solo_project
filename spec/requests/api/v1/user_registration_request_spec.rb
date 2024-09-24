@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'User Registration Request', type: :request do
   before(:each) do
     @body = {
-      "email": "lance@turing.com",
+      "email": "Lance@turing.com",
       "password": "iloveruby123",
       "password_confirmation": "iloveruby123"
     }
@@ -41,7 +41,7 @@ RSpec.describe 'User Registration Request', type: :request do
 
     expect(json[:attributes]).to have_key(:email)
     expect(json[:attributes][:email]).to be_a(String)
-    expect(json[:attributes][:email]).to eq(user.email)
+    expect(json[:attributes][:email]).to eq(user.email.downcase)
 
     expect(json[:attributes]).to have_key(:api_key)
     expect(json[:attributes][:api_key]).to be_a(String)
