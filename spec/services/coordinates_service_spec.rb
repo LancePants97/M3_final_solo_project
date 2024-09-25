@@ -15,4 +15,14 @@ RSpec.describe "Coordinates Service" do
     expect(location[:latLng]).to be_a(Hash)
     expect(location[:latLng]).to eq( {:lat=>40.0723, :lng=>-74.07124} )
   end
+
+  it "searches our API to find directions for a road trip" do
+    origin = "New York, NY"
+    destination = "Los Angeles"
+
+    results = CoordinatesService.get_road_trip(origin, destination)
+
+    expect(results).to have_key(:time)
+    expect(results).to have_key(:formattedTime)
+  end
 end
