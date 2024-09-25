@@ -4,7 +4,6 @@ class AllWeather
               :forecast
               
   def initialize(current, hourly, forecast)
-    # binding.pry
     @current = current
     @hourly = hourly
     @forecast = forecast
