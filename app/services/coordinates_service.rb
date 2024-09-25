@@ -22,12 +22,5 @@ class CoordinatesService
 
     data = JSON.parse(response.body, symbolize_names: true)
     data[:route]
-    # if response.success? && data[:info][:statuscode] == 0
-    #   data[:route]
-    # else
-    #   # binding.pry
-    #   # raise "Routing is impossible for this destination"
-    #   # render json: RoutingErrorSerializer.error_json(origin, destination)
-    # end
   end
 end
