@@ -95,32 +95,3 @@ Response:
 }
 
 
-
-LOGIN
-POST localhost:3000/api/v1/login
-Body: 
-{
-  "username": "checkmatebitch",
-  "password": "password123"
-}
-
-Response:
-{
-  "data": {
-    "type": "user",
-    "id": "1",
-    "attributes": {
-      "email": "whatever@example.com",
-      "api_key": "t1h2i3s4_i5s6_l7e8g9i10t11"
-    }
-  }
-}
-
-ENDPOINTS
-login
-search to add friends endpoint
-friends list
-stats
-user profile
-
-
