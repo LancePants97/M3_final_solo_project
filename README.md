@@ -1,24 +1,126 @@
-# README
+# M3 FINAL PROJECT README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LEARNING GOALS
+- Expose an API that aggregates data from multiple external APIs
+- Expose an API that requires an authentication token
+- Expose an API for CRUD functionality
+- Determine completion criteria based on the needs of other developers
+- Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc).
 
-Things you may want to cover:
+HOW TO CLONE REPO
+- In terminal, run: "git clone git@github.com:LancePants97/M3_final_solo_project.git"
+- In terminal, run: "bundle install"
+- In terminal, run: "rails db:{drop,create,migrate}"
 
-* Ruby version
+RUN ALL TESTS
+- In terminal: run: "bundle exec rspec"
+- In terminal: run: "open coverage/index.html"
 
-* System dependencies
+API KEY
+- To see how to retrieve your API key, see 'ENDPOINT 3' below
 
-* Configuration
+ENDPOINTS
+ENDPOINT 1: Retrieve weather for a city
+- GET /api/v1/forecast?location=(city/town and state abbreviation go here - like 'cincinnati,oh')
+- example: GET /api/v1/forecast?location=cincinnati,oh
 
-* Database creation
+ENDPOINT 2: User Registration
+- POST /api/v1/users
+Must include email, password, and password confirmation in body to get a response
+Body: 
+{
+  "email": "whatever@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
 
-* Database initialization
+Response:
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "email": "whatever@example.com",
+      "api_key": "t1h2i3s4_i5s6_l7e8g9i10t11"
+    }
+  }
+}
 
-* How to run the test suite
+ENDPOINT 3: Login
+- POST /api/v1/sessions
+Must include email, and password in body to get a response
+Body:
+{
+  "email": "whatever@example.com",
+  "password": "password"
+}
 
-* Services (job queues, cache servers, search engines, etc.)
+Response:
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "email": "whatever@example.com",
+      "api_key": "t1h2i3s4_i5s6_l7e8g9i10t11" (NOTE: this is not a real api key)
+    }
+  }
+}
 
-* Deployment instructions
+ENDPOINT 4: Road Trip
+- POST /api/v1/road_trip
+Must include origin, destination, and api_key in body to get a response
+Body:
+{
+  "origin": "Cincinnati,OH",
+  "destination": "Chicago,IL",
+  "api_key": "t1h2i3s4_i5s6_l7e8g9i10t11" (NOTE: this is not a real api key)
+}
+Response:
+{
+    "data": {
+        "id": "null",
+        "type": "road_trip",
+        "attributes": {
+            "start_city": "Cincinnati, OH",
+            "end_city": "Chicago, IL",
+            "travel_time": "04:40:45",
+            "weather_at_eta": {
+                "datetime": "2024-09-25 23:00",
+                "temperature": 44.2,
+                "condition": "Cloudy with a chance of meatballs"
+            }
+        }
+    }
+}
 
-* ...
+
+
+LOGIN
+POST localhost:3000/api/v1/login
+Body: 
+{
+  "username": "checkmatebitch",
+  "password": "password123"
+}
+
+Response:
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "email": "whatever@example.com",
+      "api_key": "t1h2i3s4_i5s6_l7e8g9i10t11"
+    }
+  }
+}
+
+ENDPOINTS
+login
+search to add friends endpoint
+friends list
+stats
+user profile
+
+

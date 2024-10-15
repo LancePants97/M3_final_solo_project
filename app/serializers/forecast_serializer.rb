@@ -16,11 +16,11 @@ class ForecastSerializer
             "icon": weather.current.icon
           },
 
-          daily_weather: weather.forecast.map do |day|
+          "daily_weather": weather.forecast.map do |day|
             daily_forecast_json(day)
           end,
 
-          hourly_weather: weather.hourly.map do |hour|
+          "hourly_weather": weather.hourly.map do |hour|
             hourly_forecast_json(hour)
           end
         }
